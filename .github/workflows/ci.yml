@@ -50,28 +50,28 @@ jobs:
       - name: Run unit tests
         run: bundle exec fastlane ios test
 
-  test-mac:
-    name: Test (macOS)
-    runs-on: macos-latest
+  # test-mac:
+  #   name: Test (macOS)
+  #   runs-on: macos-latest
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v2
+  #       with:
+  #         fetch-depth: 0
 
-      - name: Setup ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          bundler-cache: true
+  #     - name: Setup ruby
+  #       uses: ruby/setup-ruby@v1
+  #       with:
+  #         bundler-cache: true
 
-      - name: SPM Cache
-        uses: actions/cache@v2
-        with:
-          path: .build/SourcePackages
-          key: ${{ runner.os }}-spm-${{ hashFiles('CrimeExplorer.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved') }}
-          restore-keys: |
-            ${{ runner.os }}-spm-
+  #     - name: SPM Cache
+  #       uses: actions/cache@v2
+  #       with:
+  #         path: .build/SourcePackages
+  #         key: ${{ runner.os }}-spm-${{ hashFiles('CrimeExplorer.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved') }}
+  #         restore-keys: |
+  #           ${{ runner.os }}-spm-
 
-      - name: Run unit tests
-        run: bundle exec fastlane mac test
+  #     - name: Run unit tests
+  #       run: bundle exec fastlane mac test
