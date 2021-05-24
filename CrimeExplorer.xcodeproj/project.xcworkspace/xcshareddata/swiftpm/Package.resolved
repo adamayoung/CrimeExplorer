@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SwiftSoup",
+        "repositoryURL": "https://github.com/scinfu/SwiftSoup.git",
+        "state": {
+          "branch": null,
+          "revision": "11da8c685ddde2d519fad04a7daf8485bbbc773e",
+          "version": "1.7.5"
+        }
+      },
+      {
+        "package": "UKPoliceData",
+        "repositoryURL": "https://github.com/adamayoung/UKPoliceData.git",
+        "state": {
+          "branch": "main",
+          "revision": "dcdab4c40186b9e13cd0e743b4aad0f7d91d1c69",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

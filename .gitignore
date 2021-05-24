@@ -111,10 +111,23 @@ dist
 
 ### Xcode Patch ###
 *.xcodeproj/*
+
+!*.xcodeproj/project.xcworkspace
+!*.xcodeproj/project.xcworkspace/xcshareddata
+*.xcodeproj/project.xcworkspace/*.xcworkspacedata
+*.xcodeproj/project.xcworkspace/xcshareddata/*
+!*.xcodeproj/project.xcworkspace/xcshareddata/swiftpm
+
+
+
 !*.xcodeproj/project.pbxproj
 !*.xcodeproj/xcshareddata/
+
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
+
+
+
 
 ### Ruby ###
 /vendor
