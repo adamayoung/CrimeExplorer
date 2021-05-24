@@ -91,6 +91,8 @@ fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
 
+dist
+
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
@@ -113,5 +115,8 @@ fastlane/test_output
 !*.xcodeproj/xcshareddata/
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
+
+### Ruby ###
+/vendor
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,xcode,swift,swiftpm,swiftpackagemanager,visualstudiocode

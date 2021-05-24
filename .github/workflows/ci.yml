@@ -1,0 +1,57 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+env:
+  DEVELOPER_DIR: /Applications/Xcode_12.4.app/Contents/Developer
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: swiftlint
+        run: swiftlint --strict
+
+  test:
+    name: Test
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Setup ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: SPM Cache
+        uses: actions/cache@v2
+        with:
+          path: .build/SourcePackages
+          key: ${{ runner.os }}-spm-${{ hashFiles('CrimeExplorer.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved') }}
+          restore-keys: |
+            ${{ runner.os }}-spm-
+
+      - name: Run unit tests
+        run: bundle exec fastlane test
+
+      # - name: Run danger
+      #   if: always() && github.event_name == 'pull_request'
+      #   run: bundle exec fastlane run_danger
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

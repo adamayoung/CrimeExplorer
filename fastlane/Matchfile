@@ -1,0 +1,16 @@
+git_url("https://github.com/adamayoung/certificates")
+
+storage_mode("git")
+
+type("development")
+
+for_platform :ios do
+  platform("ios")
+  app_identifier "uk.co.adam-young.CrimeExplorer,uk.co.adam-young.CrimeExplorer.watchkitapp,uk.co.adam-young.CrimeExplorer.watchkitapp.watchkitextension"
+end
+
+for_platform :mac do
+  platform("macos")
+  additional_cert_types(["mac_installer_distribution"])
+  app_identifier "uk.co.adam-young.CrimeExplorer"
+end

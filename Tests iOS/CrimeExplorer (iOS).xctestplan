@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "0B113FFD-009A-43C2-80E3-3C3D88E60B0A",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:CrimeExplorer.xcodeproj",
+      "identifier" : "494813B4265C3EB100759F5A",
+      "name" : "CrimeExplorer (iOS)"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:CrimeExplorer.xcodeproj",
+        "identifier" : "494813C4265C3EB100759F5A",
+        "name" : "Tests (iOS)"
+      }
+    }
+  ],
+  "version" : 1
+}
