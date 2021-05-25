@@ -43,7 +43,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:Tests macOS/CrimeExplorer (watchOS).xctestplan"
+            reference = "container:Tests watchOS/CrimeExplorer (watchOS).xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
@@ -71,10 +71,8 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       notificationPayloadFile = "watchOS Extension/PushNotificationPayload.apns">
-      <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/Crime Explorer">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "494813EC265C3F9D00759F5A"
@@ -82,7 +80,7 @@
             BlueprintName = "CrimeExplorer (watchOS)"
             ReferencedContainer = "container:CrimeExplorer.xcodeproj">
          </BuildableReference>
-      </RemoteRunnable>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -90,10 +88,8 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/Crime Explorer">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "494813EC265C3F9D00759F5A"
@@ -101,16 +97,7 @@
             BlueprintName = "CrimeExplorer (watchOS)"
             ReferencedContainer = "container:CrimeExplorer.xcodeproj">
          </BuildableReference>
-      </RemoteRunnable>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "494813EC265C3F9D00759F5A"
-            BuildableName = "CrimeExplorer.app"
-            BlueprintName = "CrimeExplorer (watchOS)"
-            ReferencedContainer = "container:CrimeExplorer.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

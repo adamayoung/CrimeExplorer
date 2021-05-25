@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		491EB262265CF9B100D83E4F /* CrimeExplorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494813C9265C3EB100759F5A /* CrimeExplorerTests.swift */; };
+		491EB263265CF9B100D83E4F /* CrimeExplorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494813C9265C3EB100759F5A /* CrimeExplorerTests.swift */; };
 		492757A9265C47490039A48D /* IOSAppScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492757A8265C47490039A48D /* IOSAppScene.swift */; };
 		492757AB265C478B0039A48D /* MacAppScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492757AA265C478B0039A48D /* MacAppScene.swift */; };
 		492757AC265C47920039A48D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494813AF265C3EAF00759F5A /* ContentView.swift */; };
 		492757B0265C47FB0039A48D /* WatchAppScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492757AF265C47FB0039A48D /* WatchAppScene.swift */; };
 		492757B1265C48DB0039A48D /* CrimeExplorerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494813AE265C3EAF00759F5A /* CrimeExplorerApp.swift */; };
 		492757B3265C491C0039A48D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494813B0265C3EB100759F5A /* Assets.xcassets */; };
+		4939DCC2265D47DA00297B95 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4939DCC1265D47DA00297B95 /* MapKit.framework */; };
+		4939DCC4265D47EE00297B95 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4939DCC3265D47ED00297B95 /* MapKit.framework */; };
 		494813CA265C3EB100759F5A /* CrimeExplorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494813C9265C3EB100759F5A /* CrimeExplorerTests.swift */; };
-		494813D5265C3EB100759F5A /* CrimeExplorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494813D4265C3EB100759F5A /* CrimeExplorerTests.swift */; };
 		494813D7265C3EB100759F5A /* CrimeExplorerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494813AE265C3EAF00759F5A /* CrimeExplorerApp.swift */; };
 		494813D8265C3EB100759F5A /* CrimeExplorerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494813AE265C3EAF00759F5A /* CrimeExplorerApp.swift */; };
 		494813D9265C3EB100759F5A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494813AF265C3EAF00759F5A /* ContentView.swift */; };
@@ -27,11 +30,10 @@
 		49481404265C3FA000759F5A /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49481403265C3FA000759F5A /* ComplicationController.swift */; };
 		49481406265C3FA000759F5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49481405265C3FA000759F5A /* Assets.xcassets */; };
 		49481409265C3FA000759F5A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49481408265C3FA000759F5A /* Preview Assets.xcassets */; };
-		49481415265C3FA100759F5A /* CrimeExplorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49481414265C3FA100759F5A /* CrimeExplorerTests.swift */; };
 		49481424265C3FA100759F5A /* CrimeExplorer.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 494813ED265C3F9D00759F5A /* CrimeExplorer.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		49B9B28A265C5B0F0057B4C8 /* UKPoliceData in Frameworks */ = {isa = PBXBuildFile; productRef = 49B9B289265C5B0F0057B4C8 /* UKPoliceData */; };
-		49B9B28D265C5B1B0057B4C8 /* UKPoliceData in Frameworks */ = {isa = PBXBuildFile; productRef = 49B9B28C265C5B1B0057B4C8 /* UKPoliceData */; };
-		49B9B28F265C5B230057B4C8 /* UKPoliceData in Frameworks */ = {isa = PBXBuildFile; productRef = 49B9B28E265C5B230057B4C8 /* UKPoliceData */; };
+		49B9B28A265C5B0F0057B4C8 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 49B9B289265C5B0F0057B4C8 /* SwiftPackageProductDependency */; };
+		49B9B28D265C5B1B0057B4C8 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 49B9B28C265C5B1B0057B4C8 /* SwiftPackageProductDependency */; };
+		49B9B28F265C5B230057B4C8 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 49B9B28E265C5B230057B4C8 /* SwiftPackageProductDependency */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,8 @@
 		492757A8265C47490039A48D /* IOSAppScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSAppScene.swift; sourceTree = "<group>"; };
 		492757AA265C478B0039A48D /* MacAppScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacAppScene.swift; sourceTree = "<group>"; };
 		492757AF265C47FB0039A48D /* WatchAppScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAppScene.swift; sourceTree = "<group>"; };
+		4939DCC1265D47DA00297B95 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.5.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
+		4939DCC3265D47ED00297B95 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		494813AE265C3EAF00759F5A /* CrimeExplorerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeExplorerApp.swift; sourceTree = "<group>"; };
 		494813AF265C3EAF00759F5A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		494813B0265C3EB100759F5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -113,7 +117,6 @@
 		494813C9265C3EB100759F5A /* CrimeExplorerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeExplorerTests.swift; sourceTree = "<group>"; };
 		494813CB265C3EB100759F5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		494813D0265C3EB100759F5A /* Tests (macOS).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests (macOS).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		494813D4265C3EB100759F5A /* CrimeExplorerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeExplorerTests.swift; sourceTree = "<group>"; };
 		494813D6265C3EB100759F5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		494813ED265C3F9D00759F5A /* CrimeExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrimeExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		494813F1265C3F9F00759F5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,11 +129,10 @@
 		4948140A265C3FA000759F5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4948140B265C3FA000759F5A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		49481410265C3FA000759F5A /* Tests (watchOS).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests (watchOS).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		49481414265C3FA100759F5A /* CrimeExplorerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeExplorerTests.swift; sourceTree = "<group>"; };
 		49481416265C3FA100759F5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49B9B285265C4F560057B4C8 /* CrimeExplorer (iOS).xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "CrimeExplorer (iOS).xctestplan"; sourceTree = "<group>"; };
 		49B9B286265C4FA10057B4C8 /* CrimeExplorer (macOS).xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "CrimeExplorer (macOS).xctestplan"; sourceTree = "<group>"; };
-		49B9B287265C4FC50057B4C8 /* CrimeExplorer (watchOS).xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "CrimeExplorer (watchOS).xctestplan"; path = "Tests macOS/CrimeExplorer (watchOS).xctestplan"; sourceTree = SOURCE_ROOT; };
+		49B9B287265C4FC50057B4C8 /* CrimeExplorer (watchOS).xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "CrimeExplorer (watchOS).xctestplan"; path = "Tests watchOS/CrimeExplorer (watchOS).xctestplan"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +140,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49B9B28A265C5B0F0057B4C8 /* UKPoliceData in Frameworks */,
+				4939DCC2265D47DA00297B95 /* MapKit.framework in Frameworks */,
+				49B9B28A265C5B0F0057B4C8 /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,7 +149,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49B9B28D265C5B1B0057B4C8 /* UKPoliceData in Frameworks */,
+				4939DCC4265D47EE00297B95 /* MapKit.framework in Frameworks */,
+				49B9B28D265C5B1B0057B4C8 /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,7 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49B9B28F265C5B230057B4C8 /* UKPoliceData in Frameworks */,
+				49B9B28F265C5B230057B4C8 /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +186,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		491EB261265CF3E500D83E4F /* Tests Shared */ = {
+			isa = PBXGroup;
+			children = (
+				494813C9265C3EB100759F5A /* CrimeExplorerTests.swift */,
+			);
+			path = "Tests Shared";
+			sourceTree = "<group>";
+		};
 		492757AD265C47CA0039A48D /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +219,7 @@
 				494813BE265C3EB100759F5A /* macOS */,
 				494813EE265C3F9D00759F5A /* watchOS */,
 				494813FA265C3F9F00759F5A /* watchOS Extension */,
+				491EB261265CF3E500D83E4F /* Tests Shared */,
 				494813C8265C3EB100759F5A /* Tests iOS */,
 				494813D3265C3EB100759F5A /* Tests macOS */,
 				49481413265C3FA000759F5A /* Tests watchOS */,
@@ -262,7 +275,6 @@
 			isa = PBXGroup;
 			children = (
 				49B9B285265C4F560057B4C8 /* CrimeExplorer (iOS).xctestplan */,
-				494813C9265C3EB100759F5A /* CrimeExplorerTests.swift */,
 				494813CB265C3EB100759F5A /* Info.plist */,
 			);
 			path = "Tests iOS";
@@ -272,7 +284,6 @@
 			isa = PBXGroup;
 			children = (
 				49B9B286265C4FA10057B4C8 /* CrimeExplorer (macOS).xctestplan */,
-				494813D4265C3EB100759F5A /* CrimeExplorerTests.swift */,
 				494813D6265C3EB100759F5A /* Info.plist */,
 			);
 			path = "Tests macOS";
@@ -312,7 +323,6 @@
 			isa = PBXGroup;
 			children = (
 				49B9B287265C4FC50057B4C8 /* CrimeExplorer (watchOS).xctestplan */,
-				49481414265C3FA100759F5A /* CrimeExplorerTests.swift */,
 				49481416265C3FA100759F5A /* Info.plist */,
 			);
 			path = "Tests watchOS";
@@ -321,6 +331,8 @@
 		49B9B28B265C5B1B0057B4C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4939DCC3265D47ED00297B95 /* MapKit.framework */,
+				4939DCC1265D47DA00297B95 /* MapKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -344,7 +356,7 @@
 			);
 			name = "CrimeExplorer (iOS)";
 			packageProductDependencies = (
-				49B9B289265C5B0F0057B4C8 /* UKPoliceData */,
+				49B9B289265C5B0F0057B4C8 /* SwiftPackageProductDependency */,
 			);
 			productName = "CrimeExplorer (iOS)";
 			productReference = 494813B5265C3EB100759F5A /* CrimeExplorer.app */;
@@ -364,7 +376,7 @@
 			);
 			name = "CrimeExplorer (macOS)";
 			packageProductDependencies = (
-				49B9B28C265C5B1B0057B4C8 /* UKPoliceData */,
+				49B9B28C265C5B1B0057B4C8 /* SwiftPackageProductDependency */,
 			);
 			productName = "CrimeExplorer (macOS)";
 			productReference = 494813BD265C3EB100759F5A /* Crime Explorer.app */;
@@ -437,7 +449,7 @@
 			);
 			name = "CrimeExplorer (watchOS Extension)";
 			packageProductDependencies = (
-				49B9B28E265C5B230057B4C8 /* UKPoliceData */,
+				49B9B28E265C5B230057B4C8 /* SwiftPackageProductDependency */,
 			);
 			productName = "CrimeExplorer Extension";
 			productReference = 494813F6265C3F9F00759F5A /* CrimeExploreWatchKitExtension.appex */;
@@ -506,7 +518,7 @@
 			);
 			mainGroup = 494813A8265C3EAE00759F5A;
 			packageReferences = (
-				49B9B288265C5B0F0057B4C8 /* XCRemoteSwiftPackageReference "UKPoliceData" */,
+				49B9B288265C5B0F0057B4C8 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 494813B6265C3EB100759F5A /* Products */;
 			projectDirPath = "";
@@ -613,7 +625,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				494813D5265C3EB100759F5A /* CrimeExplorerTests.swift in Sources */,
+				491EB262265CF9B100D83E4F /* CrimeExplorerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,7 +646,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49481415265C3FA100759F5A /* CrimeExplorerTests.swift in Sources */,
+				491EB263265CF9B100D83E4F /* CrimeExplorerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -891,7 +903,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.adam-young.Tests-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.adam-young.CrimeExplorer.Tests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -912,7 +924,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.adam-young.Tests-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.adam-young.CrimeExplorer.Tests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -935,7 +947,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.adam-young.Tests-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.adam-young.CrimeExplorer.Tests-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -956,7 +968,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.adam-young.Tests-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.adam-young.CrimeExplorer.Tests-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -1069,13 +1081,13 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B43ZJ6HHUE;
-				INFOPLIST_FILE = CrimeExplorerTests/Info.plist;
+				INFOPLIST_FILE = "Tests watchOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.adam-young.CrimeExplorer.CrimeExplorerTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.adam-young.CrimeExplorer.Tests-watchOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SWIFT_VERSION = 5.0;
@@ -1091,13 +1103,13 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B43ZJ6HHUE;
-				INFOPLIST_FILE = CrimeExplorerTests/Info.plist;
+				INFOPLIST_FILE = "Tests watchOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.adam-young.CrimeExplorer.CrimeExplorerTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.adam-young.CrimeExplorer.Tests-watchOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SWIFT_VERSION = 5.0;
@@ -1185,7 +1197,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		49B9B288265C5B0F0057B4C8 /* XCRemoteSwiftPackageReference "UKPoliceData" */ = {
+		49B9B288265C5B0F0057B4C8 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/adamayoung/UKPoliceData.git";
 			requirement = {
@@ -1196,19 +1208,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		49B9B289265C5B0F0057B4C8 /* UKPoliceData */ = {
+		49B9B289265C5B0F0057B4C8 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 49B9B288265C5B0F0057B4C8 /* XCRemoteSwiftPackageReference "UKPoliceData" */;
+			package = 49B9B288265C5B0F0057B4C8 /* RemoteSwiftPackageReference */;
 			productName = UKPoliceData;
 		};
-		49B9B28C265C5B1B0057B4C8 /* UKPoliceData */ = {
+		49B9B28C265C5B1B0057B4C8 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 49B9B288265C5B0F0057B4C8 /* XCRemoteSwiftPackageReference "UKPoliceData" */;
+			package = 49B9B288265C5B0F0057B4C8 /* RemoteSwiftPackageReference */;
 			productName = UKPoliceData;
 		};
-		49B9B28E265C5B230057B4C8 /* UKPoliceData */ = {
+		49B9B28E265C5B230057B4C8 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 49B9B288265C5B0F0057B4C8 /* XCRemoteSwiftPackageReference "UKPoliceData" */;
+			package = 49B9B288265C5B0F0057B4C8 /* RemoteSwiftPackageReference */;
 			productName = UKPoliceData;
 		};
 /* End XCSwiftPackageProductDependency section */

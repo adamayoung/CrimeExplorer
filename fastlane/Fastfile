@@ -32,7 +32,10 @@ platform :ios do
 
   desc "Build"
   lane :build do
+    match(type: "appstore")
+    update_code_signing_settings(use_automatic_signing: false)
     gym(skip_archive: true)
+    update_code_signing_settings(use_automatic_signing: true)
   end
 
   desc "Build and Sign"
@@ -82,11 +85,11 @@ platform :mac do
     gym
   end
 
-  # desc "CI Build"
-  # lane :ci do
-  #   match(type: "development")
-  #   swiftlint
-  #   scan
-  #   gym(skip_archive: true, skip_codesigning: true)
-  # end
+  desc "Build and Sign"
+  lane :build_and_sign do
+    match(type: "appstore")
+    update_code_signing_settings(use_automatic_signing: false)
+    gym
+    update_code_signing_settings(use_automatic_signing: true)
+  end
 end

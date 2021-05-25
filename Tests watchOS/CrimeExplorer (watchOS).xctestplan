@@ -1,7 +1,7 @@
 {
   "configurations" : [
     {
-      "id" : "0B113FFD-009A-43C2-80E3-3C3D88E60B0A",
+      "id" : "50E7C261-B9A8-4944-A7E4-2BDE6FA16FE2",
       "name" : "Configuration 1",
       "options" : {
 
@@ -9,20 +9,19 @@
     }
   ],
   "defaultOptions" : {
-    "language" : "en-GB",
-    "region" : "GB",
+    "codeCoverage" : false,
     "targetForVariableExpansion" : {
       "containerPath" : "container:CrimeExplorer.xcodeproj",
-      "identifier" : "494813B4265C3EB100759F5A",
-      "name" : "CrimeExplorer (iOS)"
+      "identifier" : "494813EC265C3F9D00759F5A",
+      "name" : "CrimeExplorer (watchOS)"
     }
   },
   "testTargets" : [
     {
       "target" : {
         "containerPath" : "container:CrimeExplorer.xcodeproj",
-        "identifier" : "494813C4265C3EB100759F5A",
-        "name" : "Tests (iOS)"
+        "identifier" : "4948140F265C3FA000759F5A",
+        "name" : "Tests (watchOS)"
       }
     }
   ],
