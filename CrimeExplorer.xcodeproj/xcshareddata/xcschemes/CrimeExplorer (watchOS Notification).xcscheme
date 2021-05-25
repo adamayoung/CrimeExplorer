@@ -56,8 +56,10 @@
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "8"
       notificationPayloadFile = "watchOS Extension/PushNotificationPayload.apns">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/Crime Explorer">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "494813EC265C3F9D00759F5A"
@@ -65,7 +67,7 @@
             BlueprintName = "CrimeExplorer (watchOS)"
             ReferencedContainer = "container:CrimeExplorer.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -75,8 +77,10 @@
       debugDocumentVersioning = "YES"
       launchAutomaticallySubstyle = "8"
       notificationPayloadFile = "watchOS Extension/PushNotificationPayload.apns">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/Crime Explorer">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "494813EC265C3F9D00759F5A"
@@ -84,7 +88,16 @@
             BlueprintName = "CrimeExplorer (watchOS)"
             ReferencedContainer = "container:CrimeExplorer.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "494813EC265C3F9D00759F5A"
+            BuildableName = "CrimeExplorer.app"
+            BlueprintName = "CrimeExplorer (watchOS)"
+            ReferencedContainer = "container:CrimeExplorer.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
