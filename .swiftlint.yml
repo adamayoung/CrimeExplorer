@@ -1,4 +1,5 @@
 excluded:
+  - vendor
 
 disabled_rules:
   - line_length
