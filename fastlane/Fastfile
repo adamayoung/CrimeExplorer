@@ -47,9 +47,9 @@ platform :ios do
   end
 
   desc "Upload to TestFlight"
-  lane :beta do |options|
-    # ensure_git_branch(branch: "main")
-    app_store_connect_api_key(key_filepath: options[:key_filepath])
+  lane :beta do
+    ensure_git_branch(branch: "main")
+    app_store_connect_api_key
     match(type: "appstore")
     increment_build_number(
       build_number: latest_testflight_build_number + 1,
