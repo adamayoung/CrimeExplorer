@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "50E7C261-B9A8-4944-A7E4-2BDE6FA16FE2",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:CrimeExplorer.xcodeproj",
+      "identifier" : "494813EC265C3F9D00759F5A",
+      "name" : "CrimeExplorer (watchOS)"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:CrimeExplorer.xcodeproj",
+        "identifier" : "4948140F265C3FA000759F5A",
+        "name" : "Tests (watchOS)"
+      }
+    }
+  ],
+  "version" : 1
+}

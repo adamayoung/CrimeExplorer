@@ -1,0 +1,14 @@
+skip_build(true)
+derived_data_path(".build")
+code_coverage(true)
+
+for_platform :ios do
+  device("iPhone 12 Pro Max")
+  scheme("CrimeExplorer (iOS)")
+  testplan("CrimeExplorer (iOS)")
+end
+
+for_platform :mac do
+  scheme("CrimeExplorer (macOS)")
+  testplan("CrimeExplorer (macOS)")
+end

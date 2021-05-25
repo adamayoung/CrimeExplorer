@@ -1,0 +1,13 @@
+derived_data_path(".build")
+configuration("Release")
+codesigning_identity("Apple Distribution")
+
+for_platform :ios do
+  scheme("CrimeExplorer (iOS)")
+  output_directory("./dist/ios")
+end
+
+for_platform :mac do
+  scheme("CrimeExplorer (macOS)")
+  output_directory("./dist/macos")
+end
