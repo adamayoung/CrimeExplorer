@@ -24,8 +24,8 @@ jobs:
       - name: swiftlint
         run: swiftlint --strict
 
-  test-ios:
-    name: Test (iOS)
+  test-build-ios:
+    name: Test and Build (iOS)
     runs-on: macos-latest
 
     steps:
@@ -47,7 +47,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-spm-
 
-      - name: Run unit tests
+      - name: Test
         run: bundle exec fastlane ios test
 
       - name: Build and Sign
