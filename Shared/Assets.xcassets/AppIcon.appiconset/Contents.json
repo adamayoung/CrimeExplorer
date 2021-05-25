@@ -1,43 +1,43 @@
 {
   "images" : [
     {
-      "filename" : "AppIcon-42.png",
+      "filename" : "AppIcon-40.png",
       "idiom" : "iphone",
       "scale" : "2x",
-      "size" : "20x20"
-    },
-    {
-      "filename" : "AppIcon-61.png",
-      "idiom" : "iphone",
-      "scale" : "3x",
       "size" : "20x20"
     },
     {
       "filename" : "AppIcon-60.png",
       "idiom" : "iphone",
+      "scale" : "3x",
+      "size" : "20x20"
+    },
+    {
+      "filename" : "AppIcon-58.png",
+      "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
-      "filename" : "AppIcon-89.png",
+      "filename" : "AppIcon-87.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "29x29"
     },
     {
-      "filename" : "AppIcon-82.png",
+      "filename" : "AppIcon-80.png",
       "idiom" : "iphone",
       "scale" : "2x",
-      "size" : "40x40"
-    },
-    {
-      "filename" : "AppIcon-121.png",
-      "idiom" : "iphone",
-      "scale" : "3x",
       "size" : "40x40"
     },
     {
       "filename" : "AppIcon-120.png",
+      "idiom" : "iphone",
+      "scale" : "3x",
+      "size" : "40x40"
+    },
+    {
+      "filename" : "AppIcon-121.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
@@ -73,7 +73,7 @@
       "size" : "29x29"
     },
     {
-      "filename" : "AppIcon-40.png",
+      "filename" : "AppIcon-42.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "40x40"
@@ -103,7 +103,7 @@
       "size" : "83.5x83.5"
     },
     {
-      "filename" : "AppIcon-1026.png",
+      "filename" : "AppIcon-1025.png",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
@@ -125,21 +125,21 @@
       "subtype" : "42mm"
     },
     {
-      "filename" : "AppIcon-58.png",
+      "filename" : "AppIcon-61.png",
       "idiom" : "watch",
       "role" : "companionSettings",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
-      "filename" : "AppIcon-87.png",
+      "filename" : "AppIcon-88.png",
       "idiom" : "watch",
       "role" : "companionSettings",
       "scale" : "3x",
       "size" : "29x29"
     },
     {
-      "filename" : "AppIcon-80.png",
+      "filename" : "AppIcon-82.png",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -147,7 +147,7 @@
       "subtype" : "38mm"
     },
     {
-      "filename" : "AppIcon-88.png",
+      "filename" : "AppIcon-89.png",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -187,7 +187,7 @@
       "subtype" : "44mm"
     },
     {
-      "filename" : "AppIcon-1025.png",
+      "filename" : "AppIcon-1026.png",
       "idiom" : "watch-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
