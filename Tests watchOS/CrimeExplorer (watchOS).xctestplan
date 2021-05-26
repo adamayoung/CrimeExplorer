@@ -4,17 +4,22 @@
       "id" : "50E7C261-B9A8-4944-A7E4-2BDE6FA16FE2",
       "name" : "Configuration 1",
       "options" : {
-
+        "locationScenario" : {
+          "identifier" : "London, England",
+          "referenceType" : "built-in"
+        }
       }
     }
   ],
   "defaultOptions" : {
-    "codeCoverage" : false,
+    "language" : "en-GB",
+    "region" : "GB",
     "targetForVariableExpansion" : {
       "containerPath" : "container:CrimeExplorer.xcodeproj",
       "identifier" : "494813EC265C3F9D00759F5A",
       "name" : "CrimeExplorer (watchOS)"
-    }
+    },
+    "testExecutionOrdering" : "random"
   },
   "testTargets" : [
     {
@@ -22,6 +27,13 @@
         "containerPath" : "container:CrimeExplorer.xcodeproj",
         "identifier" : "4948140F265C3FA000759F5A",
         "name" : "Tests (watchOS)"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/CrimeExplorerCore",
+        "identifier" : "CrimeExplorerCoreTests",
+        "name" : "CrimeExplorerCoreTests"
       }
     }
   ],

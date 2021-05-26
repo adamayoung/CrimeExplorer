@@ -1,4 +1,5 @@
 excluded:
+  - .build
   - vendor
 
 disabled_rules:
@@ -27,6 +28,9 @@ identifier_name:
   max_length: 60
   excluded:
     - app
+    - lhs
+    - rhs
+    - uk
   
 file_length:
   warning: 500

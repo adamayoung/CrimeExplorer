@@ -2,9 +2,12 @@ import SwiftUI
 
 struct ContentView: View {
 
+    @StateObject private var model = AppModel()
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        CrimeMapView()
+            .ignoresSafeArea()
+            .environmentObject(model)
     }
 
 }

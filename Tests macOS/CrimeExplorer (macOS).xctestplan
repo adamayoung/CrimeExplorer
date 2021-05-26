@@ -4,17 +4,22 @@
       "id" : "7769A071-29ED-46F4-A84A-9325FED9CD47",
       "name" : "Configuration 1",
       "options" : {
-
+        "locationScenario" : {
+          "identifier" : "London, England",
+          "referenceType" : "built-in"
+        }
       }
     }
   ],
   "defaultOptions" : {
-    "codeCoverage" : false,
+    "language" : "en-GB",
+    "region" : "GB",
     "targetForVariableExpansion" : {
       "containerPath" : "container:CrimeExplorer.xcodeproj",
       "identifier" : "494813BC265C3EB100759F5A",
       "name" : "CrimeExplorer (macOS)"
-    }
+    },
+    "testExecutionOrdering" : "random"
   },
   "testTargets" : [
     {
@@ -22,6 +27,13 @@
         "containerPath" : "container:CrimeExplorer.xcodeproj",
         "identifier" : "494813CF265C3EB100759F5A",
         "name" : "Tests (macOS)"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/CrimeExplorerCore",
+        "identifier" : "CrimeExplorerCoreTests",
+        "name" : "CrimeExplorerCoreTests"
       }
     }
   ],
