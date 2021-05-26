@@ -8,7 +8,6 @@ struct ContentView: View {
         CrimeMapView()
             .ignoresSafeArea()
             .environmentObject(model)
-            .onAppear(perform: model.requestLocationAuthorization)
     }
 
 }

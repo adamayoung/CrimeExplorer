@@ -1,7 +1,7 @@
 import Foundation
 import MapKit
 
-extension MKCoordinateRegion {
+public extension MKCoordinateRegion {
 
     static var `default`: MKCoordinateRegion {
         .uk

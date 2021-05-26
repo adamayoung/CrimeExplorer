@@ -4,7 +4,10 @@
       "id" : "0B113FFD-009A-43C2-80E3-3C3D88E60B0A",
       "name" : "Configuration 1",
       "options" : {
-
+        "locationScenario" : {
+          "identifier" : "London, England",
+          "referenceType" : "built-in"
+        }
       }
     }
   ],
@@ -15,7 +18,8 @@
       "containerPath" : "container:CrimeExplorer.xcodeproj",
       "identifier" : "494813B4265C3EB100759F5A",
       "name" : "CrimeExplorer (iOS)"
-    }
+    },
+    "testExecutionOrdering" : "random"
   },
   "testTargets" : [
     {
@@ -23,6 +27,13 @@
         "containerPath" : "container:CrimeExplorer.xcodeproj",
         "identifier" : "494813C4265C3EB100759F5A",
         "name" : "Tests (iOS)"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/CrimeExplorerCore",
+        "identifier" : "CrimeExplorerCoreTests",
+        "name" : "CrimeExplorerCoreTests"
       }
     }
   ],

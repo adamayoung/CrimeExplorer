@@ -1,53 +1,48 @@
 import Combine
+import CrimeExplorerCore
 import Foundation
 import MapKit
 import SwiftUI
 
 final class AppModel: ObservableObject {
 
-    @Published private(set) var authorisationStatus: CLAuthorizationStatus = .notDetermined
     @Published private(set) var currentLocation: CLLocation?
     @Published var region: MKCoordinateRegion
     @Published var userTrackingMode: MapUserTrackingMode = .follow
 
     private var cancellables: Set<AnyCancellable> = []
 
-    private let locationManager: LocationManager
+    private let locationService: LocationService
 
-    init(locationManager: LocationManager = LocationManager(), initialRegion: MKCoordinateRegion = .default) {
-        self.locationManager = locationManager
+    init(locationService: LocationService = CLLocationService(), initialRegion: MKCoordinateRegion = .default) {
+        self.locationService = locationService
         self.region = initialRegion
 
-        // swiftlint:disable first_where
-        locationManager.$currentLocation
-            .filter { $0 != nil }
-            .first()
-            .sink(receiveValue: zoomToLocation)
-            .store(in: &cancellables)
-        // swiftlint:enable first_where
-
-        locationManager.$currentLocation
+        locationService.locationPublisher()
+            .compactMap { $0 }
             .assign(to: \.currentLocation, on: self)
             .store(in: &cancellables)
+
+        $currentLocation
+            .compactMap { $0 }
+            .first()
+            .sink(receiveValue: updateRegion(toLocation:))
+            .store(in: &cancellables)
     }
 
-    func requestLocationAuthorization() {
-        locationManager.requestAuthorization()
-    }
+    func updateRegionToCurrentLocation() {
+        guard let currentLocation = currentLocation else {
+            return
+        }
 
-    func zoomToCurrentLocation() {
-        zoomToLocation(currentLocation)
+        updateRegion(toLocation: currentLocation)
     }
 
 }
 
 extension AppModel {
 
-    private func zoomToLocation(_ location: CLLocation?) {
-        guard let location = location else {
-            return
-        }
-
+    private func updateRegion(toLocation location: CLLocation) {
         region = MKCoordinateRegion(
             center: location.coordinate,
             span: MKCoordinateSpan(

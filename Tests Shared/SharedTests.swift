@@ -1,6 +1,6 @@
 import XCTest
 
-class CrimeExplorerTests: XCTestCase {
+class SharedTests: XCTestCase {
 
     func test() {
         XCTAssertTrue(true)
