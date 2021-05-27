@@ -34,6 +34,12 @@
 		49481406265C3FA000759F5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49481405265C3FA000759F5A /* Assets.xcassets */; };
 		49481409265C3FA000759F5A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49481408265C3FA000759F5A /* Preview Assets.xcassets */; };
 		49481424265C3FA100759F5A /* CrimeExplorer.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 494813ED265C3F9D00759F5A /* CrimeExplorer.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		497F5AEB265EF5B0002D957E /* CrimeMapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497F5AEA265EF5B0002D957E /* CrimeMapMarker.swift */; };
+		497F5AEC265EF5B0002D957E /* CrimeMapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497F5AEA265EF5B0002D957E /* CrimeMapMarker.swift */; };
+		497F5AED265EF5B0002D957E /* CrimeMapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497F5AEA265EF5B0002D957E /* CrimeMapMarker.swift */; };
+		49912C95265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49912C94265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift */; };
+		49912C96265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49912C94265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift */; };
+		49912C97265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49912C94265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift */; };
 		49F77DE0265DA315003BAF8D /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F77DDF265DA315003BAF8D /* AppModel.swift */; };
 		49F77DE1265DA315003BAF8D /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F77DDF265DA315003BAF8D /* AppModel.swift */; };
 		49F77DE2265DA315003BAF8D /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F77DDF265DA315003BAF8D /* AppModel.swift */; };
@@ -140,6 +146,8 @@
 		4948140B265C3FA000759F5A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		49481410265C3FA000759F5A /* Tests (watchOS).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests (watchOS).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49481416265C3FA100759F5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		497F5AEA265EF5B0002D957E /* CrimeMapMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeMapMarker.swift; sourceTree = "<group>"; };
+		49912C94265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+AnnotationsVisible.swift"; sourceTree = "<group>"; };
 		49B9B285265C4F560057B4C8 /* CrimeExplorer (iOS).xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "CrimeExplorer (iOS).xctestplan"; sourceTree = "<group>"; };
 		49B9B286265C4FA10057B4C8 /* CrimeExplorer (macOS).xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "CrimeExplorer (macOS).xctestplan"; sourceTree = "<group>"; };
 		49B9B287265C4FC50057B4C8 /* CrimeExplorer (watchOS).xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "CrimeExplorer (watchOS).xctestplan"; path = "Tests watchOS/CrimeExplorer (watchOS).xctestplan"; sourceTree = SOURCE_ROOT; };
@@ -258,6 +266,7 @@
 				49F77DDF265DA315003BAF8D /* AppModel.swift */,
 				494813AF265C3EAF00759F5A /* ContentView.swift */,
 				49F77DD1265D9584003BAF8D /* CrimeMapView */,
+				49912C93265F129B00D23CA3 /* Extensions */,
 				494813B0265C3EB100759F5A /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -353,6 +362,14 @@
 			path = "Tests watchOS";
 			sourceTree = "<group>";
 		};
+		49912C93265F129B00D23CA3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				49912C94265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		49B9B28B265C5B1B0057B4C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +386,7 @@
 			isa = PBXGroup;
 			children = (
 				49F77DD2265D95B1003BAF8D /* CrimeMapView.swift */,
+				497F5AEA265EF5B0002D957E /* CrimeMapMarker.swift */,
 			);
 			path = CrimeMapView;
 			sourceTree = "<group>";
@@ -637,7 +655,9 @@
 			files = (
 				49F77DF4265DB444003BAF8D /* CrimeMapView.swift in Sources */,
 				49F77DE0265DA315003BAF8D /* AppModel.swift in Sources */,
+				49912C95265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift in Sources */,
 				492757A9265C47490039A48D /* IOSAppScene.swift in Sources */,
+				497F5AEB265EF5B0002D957E /* CrimeMapMarker.swift in Sources */,
 				494813D9265C3EB100759F5A /* ContentView.swift in Sources */,
 				494813D7265C3EB100759F5A /* CrimeExplorerApp.swift in Sources */,
 			);
@@ -649,7 +669,9 @@
 			files = (
 				49F77DF5265DB45C003BAF8D /* CrimeMapView.swift in Sources */,
 				49F77DE1265DA315003BAF8D /* AppModel.swift in Sources */,
+				49912C96265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift in Sources */,
 				494813DA265C3EB100759F5A /* ContentView.swift in Sources */,
+				497F5AEC265EF5B0002D957E /* CrimeMapMarker.swift in Sources */,
 				492757AB265C478B0039A48D /* MacAppScene.swift in Sources */,
 				494813D8265C3EB100759F5A /* CrimeExplorerApp.swift in Sources */,
 			);
@@ -681,8 +703,10 @@
 				492757AC265C47920039A48D /* ContentView.swift in Sources */,
 				49F77DF6265DB45E003BAF8D /* CrimeMapView.swift in Sources */,
 				492757B0265C47FB0039A48D /* WatchAppScene.swift in Sources */,
+				497F5AED265EF5B0002D957E /* CrimeMapMarker.swift in Sources */,
 				49481404265C3FA000759F5A /* ComplicationController.swift in Sources */,
 				49481402265C3FA000759F5A /* NotificationView.swift in Sources */,
+				49912C97265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

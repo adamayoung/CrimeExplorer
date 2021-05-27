@@ -28,6 +28,7 @@ identifier_name:
   max_length: 60
   excluded:
     - app
+    - id
     - lhs
     - rhs
     - uk

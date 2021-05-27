@@ -7,7 +7,7 @@ let package = Package(
     name: "CrimeExplorerCore",
 
     platforms: [
-        .macOS(.v10_15), .iOS(.v14), .tvOS(.v14), .watchOS(.v7)
+        .macOS(.v11), .iOS(.v14), .tvOS(.v14), .watchOS(.v7)
     ],
 
     products: [
