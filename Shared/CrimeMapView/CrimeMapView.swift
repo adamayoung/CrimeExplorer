@@ -16,6 +16,8 @@ struct CrimeMapView: View {
         ) {
             annotation(for: $0)
         }
+        .accessibility(label: Text("CRIMES"))
+        .accessibility(identifier: "crimeMap")
         .onReceive(
             model.$region.throttle(for: .milliseconds(100), scheduler: DispatchQueue.main, latest: true)
         ) {

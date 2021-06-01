@@ -30,12 +30,14 @@ struct StreetCrimeSummaryMapMarker: View {
                 .opacity(showAnnotationLabels ? 1 : 0)
                 .animation(.easeIn)
         }
+        .accessibilityElement(children: .ignore)
+        .accessibility(label: accessibilityLabel)
+        .accessibility(identifier: "streetCrimeSummaryMapMarker-\(summary.id)")
         .scaleEffect(scale)
         .transition(.opacity)
         .opacity(opacity)
         .animation(animation, value: scale)
         .animation(animation, value: opacity)
-
         .onAppear(perform: show)
         .onDisappear(perform: hide)
     }
@@ -48,11 +50,19 @@ struct StreetCrimeSummaryMapMarker: View {
             .frame(width: 20, height: 20, alignment: .center)
     }
 
-    @ViewBuilder private var label: some View {
+    private var label: Text {
         if summary.crimes.count == 1 {
-            Text(summary.crimes[0].category.name)
+            return Text(summary.crimes[0].category.name)
         } else {
-            Text("CRIME_CATEGORY_MULTIPLE_CRIMES")
+            return Text("CRIME_CATEGORY_MULTIPLE_CRIMES")
+        }
+    }
+
+    private var accessibilityLabel: Text {
+        if summary.crimes.count == 1 {
+            return Text("CRIME_CATEGORY_\(summary.crimes[0].category.name)_AT_LOCATION_NAME_\(summary.name)")
+        } else {
+            return Text("CRIME_CATEGORY_MULTIPLE_CRIMES_AT_LOCATION_NAME_\(summary.name)")
         }
     }
 

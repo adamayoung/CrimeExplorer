@@ -1,1 +1,5 @@
+"CRIMES" = "Crimes";
+
 "CRIME_CATEGORY_MULTIPLE_CRIMES" = "Crimes multiples";
+"CRIME_CATEGORY_MULTIPLE_CRIMES_AT_LOCATION_NAME_%@" = "Crimes multiples %@";
+"CRIME_CATEGORY_%@_AT_LOCATION_NAME_%@" = "%@ %@";

@@ -48,6 +48,11 @@
 		49912C95265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49912C94265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift */; };
 		49912C96265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49912C94265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift */; };
 		49912C97265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49912C94265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift */; };
+		49B363F72666DC7A004462EC /* CrimeMapViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B363F62666DC7A004462EC /* CrimeMapViewTests.swift */; };
+		49B363F92666DE46004462EC /* UITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B363F82666DE46004462EC /* UITestCase.swift */; };
+		49B363FA2666DE46004462EC /* UITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B363F82666DE46004462EC /* UITestCase.swift */; };
+		49B363FB2666DE46004462EC /* UITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B363F82666DE46004462EC /* UITestCase.swift */; };
+		49B363FD2666E15F004462EC /* CrimeMapViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B363FC2666E15F004462EC /* CrimeMapViewTests.swift */; };
 		49F77DE0265DA315003BAF8D /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F77DDF265DA315003BAF8D /* AppModel.swift */; };
 		49F77DE1265DA315003BAF8D /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F77DDF265DA315003BAF8D /* AppModel.swift */; };
 		49F77DE2265DA315003BAF8D /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F77DDF265DA315003BAF8D /* AppModel.swift */; };
@@ -160,6 +165,9 @@
 		498CE9A12661479800444A29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		498CE9A32661479B00444A29 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49912C94265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+AnnotationsVisible.swift"; sourceTree = "<group>"; };
+		49B363F62666DC7A004462EC /* CrimeMapViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeMapViewTests.swift; sourceTree = "<group>"; };
+		49B363F82666DE46004462EC /* UITestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestCase.swift; sourceTree = "<group>"; };
+		49B363FC2666E15F004462EC /* CrimeMapViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeMapViewTests.swift; sourceTree = "<group>"; };
 		49B9B285265C4F560057B4C8 /* CrimeExplorer (iOS).xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "CrimeExplorer (iOS).xctestplan"; sourceTree = "<group>"; };
 		49B9B286265C4FA10057B4C8 /* CrimeExplorer (macOS).xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "CrimeExplorer (macOS).xctestplan"; sourceTree = "<group>"; };
 		49B9B287265C4FC50057B4C8 /* CrimeExplorer (watchOS).xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "CrimeExplorer (watchOS).xctestplan"; path = "Tests watchOS/CrimeExplorer (watchOS).xctestplan"; sourceTree = SOURCE_ROOT; };
@@ -224,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				49433EA9265EA2580059BA9E /* SharedTests.swift */,
+				49B363F82666DE46004462EC /* UITestCase.swift */,
 			);
 			path = "Tests Shared";
 			sourceTree = "<group>";
@@ -323,6 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				49B9B285265C4F560057B4C8 /* CrimeExplorer (iOS).xctestplan */,
+				49B363F62666DC7A004462EC /* CrimeMapViewTests.swift */,
 				494813CB265C3EB100759F5A /* Info.plist */,
 			);
 			path = "Tests iOS";
@@ -332,6 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				49B9B286265C4FA10057B4C8 /* CrimeExplorer (macOS).xctestplan */,
+				49B363FC2666E15F004462EC /* CrimeMapViewTests.swift */,
 				494813D6265C3EB100759F5A /* Info.plist */,
 			);
 			path = "Tests macOS";
@@ -764,7 +775,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49B363F72666DC7A004462EC /* CrimeMapViewTests.swift in Sources */,
 				49433EAA265EA2580059BA9E /* SharedTests.swift in Sources */,
+				49B363F92666DE46004462EC /* UITestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -772,7 +785,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49B363FD2666E15F004462EC /* CrimeMapViewTests.swift in Sources */,
 				49433EAB265EA2580059BA9E /* SharedTests.swift in Sources */,
+				49B363FA2666DE46004462EC /* UITestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -798,6 +813,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49433EAC265EA2580059BA9E /* SharedTests.swift in Sources */,
+				49B363FB2666DE46004462EC /* UITestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
