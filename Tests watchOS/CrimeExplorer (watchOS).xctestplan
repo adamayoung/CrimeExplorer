@@ -2,7 +2,7 @@
   "configurations" : [
     {
       "id" : "50E7C261-B9A8-4944-A7E4-2BDE6FA16FE2",
-      "name" : "Configuration 1",
+      "name" : "en",
       "options" : {
         "locationScenario" : {
           "identifier" : "London, England",

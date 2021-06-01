@@ -6,8 +6,10 @@ import PackageDescription
 let package = Package(
     name: "CrimeExplorerCore",
 
+    defaultLocalization: "en",
+
     platforms: [
-        .macOS(.v10_15), .iOS(.v14), .tvOS(.v14), .watchOS(.v7)
+        .macOS(.v11), .iOS(.v14), .tvOS(.v14), .watchOS(.v7)
     ],
 
     products: [
@@ -29,7 +31,7 @@ let package = Package(
 
         .testTarget(
             name: "CrimeExplorerCoreTests",
-            dependencies: ["CrimeExplorerCore"]
+            dependencies: ["CrimeExplorerCore", "UKPoliceData"]
         )
     ]
 )

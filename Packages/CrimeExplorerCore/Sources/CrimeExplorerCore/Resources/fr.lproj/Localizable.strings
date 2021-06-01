@@ -1,0 +1,18 @@
+////////////////////////////////////////////////////////////////////////////
+// Crime Categories
+
+"CRIME_CATEGORY_ALL_CRIME" = "Tous les crimes";
+"CRIME_CATEGORY_ANTI_SOCIAL_BEHAVIOUR" = "Comportement anti-social";
+"CRIME_CATEGORY_BICYCLE_THEFT" = "Vol de vélos";
+"CRIME_CATEGORY_BURGLARY" = "Cambriolage";
+"CRIME_CATEGORY_CRIMINAL_DAMAGE_AND_ARSON" = "Dommages criminels et incendie criminel";
+"CRIME_CATEGORY_DRUGS" = "Drogues";
+"CRIME_CATEGORY_OTHER_THEFT" = "Autre vol";
+"CRIME_CATEGORY_POSSESSION_OF_WEAPONS" = "Possession d'armes";
+"CRIME_CATEGORY_PUBLIC_ORDER" = "Ordre publique";
+"CRIME_CATEGORY_ROBBERY" = "Vol";
+"CRIME_CATEGORY_SHOPLIFTING" = "Vol à l'étalage";
+"CRIME_CATEGORY_THEFT_FROM_THE_PERSON" = "Vol de la personne";
+"CRIME_CATEGORY_VEHICLE_CRIME" = "Criminalité liée aux véhicules";
+"CRIME_CATEGORY_VIOLENCE_OR_SEXUAL_OFFENCE" = "Violence ou infraction sexuelle";
+"CRIME_CATEGORY_OTHER_CRIME" = "Autre crime";
