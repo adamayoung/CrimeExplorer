@@ -3,10 +3,9 @@ import MapKit
 
 extension MKCoordinateRegion {
 
-    public func contains(coordinate: CLLocationCoordinate2D) -> Bool {
+    public func contains(coordinate: CLLocationCoordinate2D, margin: Double = 0.01) -> Bool {
         let northWestCoordinate = self.northWestCoordinate
         let southEastRightCoordinate = self.southEastRightCoordinate
-        let margin = 0.001
 
         return coordinate.latitude >= northWestCoordinate.latitude - margin
             && coordinate.longitude >= northWestCoordinate.longitude - margin

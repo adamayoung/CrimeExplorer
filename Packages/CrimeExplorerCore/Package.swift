@@ -31,7 +31,7 @@ let package = Package(
 
         .testTarget(
             name: "CrimeExplorerCoreTests",
-            dependencies: ["CrimeExplorerCore"]
+            dependencies: ["CrimeExplorerCore", "UKPoliceData"]
         )
     ]
 )
