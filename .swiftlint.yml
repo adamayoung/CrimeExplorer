@@ -3,7 +3,6 @@ excluded:
   - vendor
 
 disabled_rules:
-  - line_length
   - weak_delegate
 
 opt_in_rules:

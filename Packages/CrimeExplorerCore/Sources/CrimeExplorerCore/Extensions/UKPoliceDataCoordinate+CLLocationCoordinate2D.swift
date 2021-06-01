@@ -10,9 +10,9 @@ extension Coordinate {
 
 }
 
-extension CLLocation {
+extension CLLocationCoordinate2D {
 
-    convenience init(coordinate: Coordinate) {
+    init(coordinate: Coordinate) {
         self.init(latitude: coordinate.latitude, longitude: coordinate.longitude)
     }
 

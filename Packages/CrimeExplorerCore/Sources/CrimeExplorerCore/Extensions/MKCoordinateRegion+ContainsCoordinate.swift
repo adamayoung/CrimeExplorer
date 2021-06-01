@@ -1,9 +1,9 @@
 import Foundation
 import MapKit
 
-public extension MKCoordinateRegion {
+extension MKCoordinateRegion {
 
-    func contains(coordinate: CLLocationCoordinate2D) -> Bool {
+    public func contains(coordinate: CLLocationCoordinate2D) -> Bool {
         let northWestCoordinate = self.northWestCoordinate
         let southEastRightCoordinate = self.southEastRightCoordinate
         let margin = 0.001

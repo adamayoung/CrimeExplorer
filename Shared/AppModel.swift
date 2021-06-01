@@ -6,16 +6,19 @@ import SwiftUI
 
 final class AppModel: ObservableObject {
 
+    private static let dataAvailabilityRegion = MKCoordinateRegion.uk
+
     @Published private(set) var currentLocation: CLLocation?
     @Published var region: MKCoordinateRegion
     @Published var userTrackingMode: MapUserTrackingMode = .follow
-    @Published var crimes: [Crime] = []
+    @Published private(set) var streetCrimeSummaries: [StreetCrimeSummary] = []
 
-    @Published private var allCrimes: [Crime] = []
     private let backgroundScheduler = DispatchQueue.global(qos: .userInitiated)
-    private var cancellables: Set<AnyCancellable> = []
     private let locationService: LocationService
     private let crimeManager: CrimeManager
+    @Published private var allStreetCrimeSummaries: [StreetCrimeSummary] = []
+    private var requestedLocationCoordinates: [CLLocationCoordinate2D] = []
+    private var cancellables: Set<AnyCancellable> = []
 
     init(locationService: LocationService = CLLocationService(), crimeManager: CrimeManager = UKCrimeManager(),
          initialRegion: MKCoordinateRegion = .default) {
@@ -53,37 +56,35 @@ extension AppModel {
 
         $region
             .debounce(for: .milliseconds(500), scheduler: backgroundScheduler)
-            .removeDuplicates { $1.isWithin(distance: 804, of: $0) }
             .filter { $0.shouldAnnotationsBeVisible }
             .map { $0.center }
-            .flatMap(self.crimeManager.crimesPublisher(atCoordinate:))
-            .map { fetchedCrimes in
-                let fetchedCrimes = Set(fetchedCrimes)
-                let currentCrimes = Set(self.allCrimes)
-                let crimes = currentCrimes.union(fetchedCrimes)
-                return Array(crimes)
+            .filter { Self.dataAvailabilityRegion.contains(coordinate: $0) }
+            .removeDuplicates {
+                $1.isWithin(.halfMile, of: self.requestedLocationCoordinates)
+            }
+            .handleEvents(receiveOutput: { self.requestedLocationCoordinates.append($0) })
+            .flatMap(self.crimeManager.streetCrimeSummariesPublisher(atCoordinate:))
+            .map { fetchedSummaries in
+                let fetchedSummaries = Set(fetchedSummaries)
+                let currentSummaries = Set(self.allStreetCrimeSummaries)
+                let summaries = currentSummaries.union(fetchedSummaries)
+                return Array(summaries)
             }
             .receive(on: DispatchQueue.main)
-            .assign(to: \.allCrimes, on: self)
+            .assign(to: \.allStreetCrimeSummaries, on: self)
             .store(in: &cancellables)
 
-        Publishers.CombineLatest($region, $allCrimes)
+        Publishers.CombineLatest($region, $allStreetCrimeSummaries)
             .throttle(for: .milliseconds(100), scheduler: backgroundScheduler, latest: true)
-            .map { (region, crimes) -> [Crime] in
-                guard region.shouldAnnotationsBeVisible else {
-                    return []
-                }
-
-                return crimes
+            .map { (region, summaries) in
+                region.shouldAnnotationsBeVisible ? summaries : []
             }
             .map {
-                $0.filter {
-                    self.region.contains(coordinate: $0.location.coordinate)
-                }
+                $0.filter { self.region.contains(coordinate: $0.coordinate) }
             }
             .removeDuplicates()
             .receive(on: DispatchQueue.main)
-            .assign(to: \.crimes, on: self)
+            .assign(to: \.streetCrimeSummaries, on: self)
             .store(in: &cancellables)
     }
 

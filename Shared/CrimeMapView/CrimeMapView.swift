@@ -1,25 +1,43 @@
+import CrimeExplorerCore
 import MapKit
 import SwiftUI
 
 struct CrimeMapView: View {
 
     @EnvironmentObject private var model: AppModel
+    @State private var showAnnotationLabels: Bool = false
 
     var body: some View {
-        Map(coordinateRegion: $model.region, interactionModes: .all, showsUserLocation: true,
-            userTrackingMode: $model.userTrackingMode, annotationItems: model.crimes) { crime in
-            MapAnnotation(coordinate: crime.location.coordinate, anchorPoint: CGPoint(x: 0.5, y: 0.5)) {
-                CrimeMapMarker(category: crime.category)
-            }
+        Map(coordinateRegion: $model.region,
+            interactionModes: .all,
+            showsUserLocation: true,
+            userTrackingMode: $model.userTrackingMode,
+            annotationItems: model.streetCrimeSummaries
+        ) {
+            annotation(for: $0)
+        }
+        .onReceive(
+            model.$region.throttle(for: .milliseconds(100), scheduler: DispatchQueue.main, latest: true)
+        ) {
+            showAnnotationLabels = $0.shouldAnnotationLabelsBeVisible
         }
     }
+
+    private func annotation(for summary: StreetCrimeSummary) -> MapAnnotation<StreetCrimeSummaryMapMarker> {
+        MapAnnotation(coordinate: summary.coordinate) {
+            StreetCrimeSummaryMapMarker(summary: summary, showAnnotationLabels: showAnnotationLabels)
+        }
+    }
+
 }
 
 struct CrimeMapView_Previews: PreviewProvider {
 
     static var previews: some View {
+
         CrimeMapView()
             .environmentObject(AppModel.mock)
+            .previewDevice("iPhone 12 Pro")
     }
 
 }

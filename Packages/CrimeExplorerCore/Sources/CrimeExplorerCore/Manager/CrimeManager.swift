@@ -5,7 +5,8 @@ import UKPoliceData
 
 public protocol CrimeManager {
 
-    func crimesPublisher(atCoordinate coordinate: CLLocationCoordinate2D) -> AnyPublisher<[Crime], Never>
+    func streetCrimeSummariesPublisher(
+        atCoordinate coordinate: CLLocationCoordinate2D) -> AnyPublisher<[StreetCrimeSummary], Never>
 
 }
 
@@ -17,13 +18,12 @@ public final class UKCrimeManager: CrimeManager {
         self.crimeService = crimeService
     }
 
-    public func crimesPublisher(atCoordinate coordinate: CLLocationCoordinate2D) -> AnyPublisher<[Crime], Never> {
+    public func streetCrimeSummariesPublisher(
+        atCoordinate coordinate: CLLocationCoordinate2D) -> AnyPublisher<[StreetCrimeSummary], Never> {
         let coordinate = Coordinate(coordinate: coordinate)
         return crimeService.streetLevelCrimesPublisher(atCoordinate: coordinate)
             .retry(5)
-            .map { crimes in
-                crimes.map(Crime.init)
-            }
+            .map(StreetCrimeSummary.create)
             .replaceError(with: [])
             .eraseToAnyPublisher()
     }

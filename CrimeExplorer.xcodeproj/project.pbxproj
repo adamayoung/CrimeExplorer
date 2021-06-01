@@ -34,9 +34,17 @@
 		49481406265C3FA000759F5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49481405265C3FA000759F5A /* Assets.xcassets */; };
 		49481409265C3FA000759F5A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49481408265C3FA000759F5A /* Preview Assets.xcassets */; };
 		49481424265C3FA100759F5A /* CrimeExplorer.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 494813ED265C3F9D00759F5A /* CrimeExplorer.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		497F5AEB265EF5B0002D957E /* CrimeMapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497F5AEA265EF5B0002D957E /* CrimeMapMarker.swift */; };
-		497F5AEC265EF5B0002D957E /* CrimeMapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497F5AEA265EF5B0002D957E /* CrimeMapMarker.swift */; };
-		497F5AED265EF5B0002D957E /* CrimeMapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497F5AEA265EF5B0002D957E /* CrimeMapMarker.swift */; };
+		497F5AEB265EF5B0002D957E /* StreetCrimeSummaryMapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497F5AEA265EF5B0002D957E /* StreetCrimeSummaryMapMarker.swift */; };
+		497F5AEC265EF5B0002D957E /* StreetCrimeSummaryMapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497F5AEA265EF5B0002D957E /* StreetCrimeSummaryMapMarker.swift */; };
+		497F5AED265EF5B0002D957E /* StreetCrimeSummaryMapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497F5AEA265EF5B0002D957E /* StreetCrimeSummaryMapMarker.swift */; };
+		498CE99126613D7600444A29 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 498CE99626613D7600444A29 /* Localizable.strings */; };
+		498CE99226613D7600444A29 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 498CE99626613D7600444A29 /* Localizable.strings */; };
+		498CE99326613D7600444A29 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 498CE99626613D7600444A29 /* Localizable.strings */; };
+		498CE99426613D7600444A29 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 498CE99626613D7600444A29 /* Localizable.strings */; };
+		498CE99D2661479800444A29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 498CE9A22661479800444A29 /* InfoPlist.strings */; };
+		498CE99E2661479800444A29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 498CE9A22661479800444A29 /* InfoPlist.strings */; };
+		498CE99F2661479800444A29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 498CE9A22661479800444A29 /* InfoPlist.strings */; };
+		498CE9A02661479800444A29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 498CE9A22661479800444A29 /* InfoPlist.strings */; };
 		49912C95265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49912C94265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift */; };
 		49912C96265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49912C94265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift */; };
 		49912C97265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49912C94265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift */; };
@@ -146,7 +154,11 @@
 		4948140B265C3FA000759F5A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		49481410265C3FA000759F5A /* Tests (watchOS).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests (watchOS).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49481416265C3FA100759F5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		497F5AEA265EF5B0002D957E /* CrimeMapMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeMapMarker.swift; sourceTree = "<group>"; };
+		497F5AEA265EF5B0002D957E /* StreetCrimeSummaryMapMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetCrimeSummaryMapMarker.swift; sourceTree = "<group>"; };
+		498CE99526613D7600444A29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		498CE9972661406100444A29 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		498CE9A12661479800444A29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		498CE9A32661479B00444A29 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49912C94265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+AnnotationsVisible.swift"; sourceTree = "<group>"; };
 		49B9B285265C4F560057B4C8 /* CrimeExplorer (iOS).xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "CrimeExplorer (iOS).xctestplan"; sourceTree = "<group>"; };
 		49B9B286265C4FA10057B4C8 /* CrimeExplorer (macOS).xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "CrimeExplorer (macOS).xctestplan"; sourceTree = "<group>"; };
@@ -268,6 +280,8 @@
 				49F77DD1265D9584003BAF8D /* CrimeMapView */,
 				49912C93265F129B00D23CA3 /* Extensions */,
 				494813B0265C3EB100759F5A /* Assets.xcassets */,
+				498CE99626613D7600444A29 /* Localizable.strings */,
+				498CE9A22661479800444A29 /* InfoPlist.strings */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -386,7 +400,7 @@
 			isa = PBXGroup;
 			children = (
 				49F77DD2265D95B1003BAF8D /* CrimeMapView.swift */,
-				497F5AEA265EF5B0002D957E /* CrimeMapMarker.swift */,
+				497F5AEA265EF5B0002D957E /* StreetCrimeSummaryMapMarker.swift */,
 			);
 			path = CrimeMapView;
 			sourceTree = "<group>";
@@ -398,6 +412,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 494813DF265C3EB100759F5A /* Build configuration list for PBXNativeTarget "CrimeExplorer (iOS)" */;
 			buildPhases = (
+				498505DD2660F4F1009B405B /* Lint */,
 				494813B1265C3EB100759F5A /* Sources */,
 				494813B2265C3EB100759F5A /* Frameworks */,
 				494813B3265C3EB100759F5A /* Resources */,
@@ -420,6 +435,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 494813E2265C3EB100759F5A /* Build configuration list for PBXNativeTarget "CrimeExplorer (macOS)" */;
 			buildPhases = (
+				498505DC2660F490009B405B /* Lint */,
 				494813B9265C3EB100759F5A /* Sources */,
 				494813BA265C3EB100759F5A /* Frameworks */,
 				494813BB265C3EB100759F5A /* Resources */,
@@ -493,6 +509,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49481425265C3FA100759F5A /* Build configuration list for PBXNativeTarget "CrimeExplorer (watchOS Extension)" */;
 			buildPhases = (
+				498505DF2660F50C009B405B /* Lint */,
 				494813F2265C3F9F00759F5A /* Sources */,
 				494813F3265C3F9F00759F5A /* Frameworks */,
 				494813F4265C3F9F00759F5A /* Resources */,
@@ -572,6 +589,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 494813A8265C3EAE00759F5A;
 			packageReferences = (
@@ -597,6 +615,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				494813DB265C3EB100759F5A /* Assets.xcassets in Resources */,
+				498CE99D2661479800444A29 /* InfoPlist.strings in Resources */,
+				498CE99126613D7600444A29 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,6 +625,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				494813DC265C3EB100759F5A /* Assets.xcassets in Resources */,
+				498CE99E2661479800444A29 /* InfoPlist.strings in Resources */,
+				498CE99226613D7600444A29 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,6 +649,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				492757B3265C491C0039A48D /* Assets.xcassets in Resources */,
+				498CE99F2661479800444A29 /* InfoPlist.strings in Resources */,
+				498CE99326613D7600444A29 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,6 +659,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				49481409265C3FA000759F5A /* Preview Assets.xcassets in Resources */,
+				498CE9A02661479800444A29 /* InfoPlist.strings in Resources */,
+				498CE99426613D7600444A29 /* Localizable.strings in Resources */,
 				49481406265C3FA000759F5A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -648,6 +674,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		498505DC2660F490009B405B /* Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Lint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		498505DD2660F4F1009B405B /* Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Lint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		498505DF2660F50C009B405B /* Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Lint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		494813B1265C3EB100759F5A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -657,7 +740,7 @@
 				49F77DE0265DA315003BAF8D /* AppModel.swift in Sources */,
 				49912C95265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift in Sources */,
 				492757A9265C47490039A48D /* IOSAppScene.swift in Sources */,
-				497F5AEB265EF5B0002D957E /* CrimeMapMarker.swift in Sources */,
+				497F5AEB265EF5B0002D957E /* StreetCrimeSummaryMapMarker.swift in Sources */,
 				494813D9265C3EB100759F5A /* ContentView.swift in Sources */,
 				494813D7265C3EB100759F5A /* CrimeExplorerApp.swift in Sources */,
 			);
@@ -671,7 +754,7 @@
 				49F77DE1265DA315003BAF8D /* AppModel.swift in Sources */,
 				49912C96265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift in Sources */,
 				494813DA265C3EB100759F5A /* ContentView.swift in Sources */,
-				497F5AEC265EF5B0002D957E /* CrimeMapMarker.swift in Sources */,
+				497F5AEC265EF5B0002D957E /* StreetCrimeSummaryMapMarker.swift in Sources */,
 				492757AB265C478B0039A48D /* MacAppScene.swift in Sources */,
 				494813D8265C3EB100759F5A /* CrimeExplorerApp.swift in Sources */,
 			);
@@ -703,7 +786,7 @@
 				492757AC265C47920039A48D /* ContentView.swift in Sources */,
 				49F77DF6265DB45E003BAF8D /* CrimeMapView.swift in Sources */,
 				492757B0265C47FB0039A48D /* WatchAppScene.swift in Sources */,
-				497F5AED265EF5B0002D957E /* CrimeMapMarker.swift in Sources */,
+				497F5AED265EF5B0002D957E /* StreetCrimeSummaryMapMarker.swift in Sources */,
 				49481404265C3FA000759F5A /* ComplicationController.swift in Sources */,
 				49481402265C3FA000759F5A /* NotificationView.swift in Sources */,
 				49912C97265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift in Sources */,
@@ -748,11 +831,33 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		498CE99626613D7600444A29 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				498CE99526613D7600444A29 /* en */,
+				498CE9972661406100444A29 /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		498CE9A22661479800444A29 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				498CE9A12661479800444A29 /* en */,
+				498CE9A32661479B00444A29 /* fr */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		494813DD265C3EB100759F5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

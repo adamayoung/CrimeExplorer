@@ -1,13 +1,13 @@
 import Foundation
 import MapKit
 
-public extension MKCoordinateRegion {
+extension MKCoordinateRegion {
 
-    static var `default`: MKCoordinateRegion {
+    public static var `default`: MKCoordinateRegion {
         .uk
     }
 
-    static var uk: MKCoordinateRegion {
+    public static var uk: MKCoordinateRegion {
         MKCoordinateRegion(
             center: CLLocationCoordinate2D(
                 latitude: 54.4661645479556,
@@ -20,7 +20,7 @@ public extension MKCoordinateRegion {
         )
     }
 
-    static var towerOfLondon: MKCoordinateRegion {
+    public static var towerOfLondon: MKCoordinateRegion {
         MKCoordinateRegion(
             center: CLLocationCoordinate2D(
                 latitude: 51.508530,
