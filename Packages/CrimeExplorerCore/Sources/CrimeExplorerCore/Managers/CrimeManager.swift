@@ -20,12 +20,21 @@ public final class UKCrimeManager: CrimeManager {
 
     public func streetCrimeSummariesPublisher(
         atCoordinate coordinate: CLLocationCoordinate2D) -> AnyPublisher<[StreetCrimeSummary], Never> {
-        let coordinate = Coordinate(coordinate: coordinate)
-        return crimeService.streetLevelCrimesPublisher(atCoordinate: coordinate)
+        crimeService.streetLevelCrimesPublisher(atCoordinate: coordinate)
             .retry(5)
             .map(StreetCrimeSummary.create)
             .replaceError(with: [])
             .eraseToAnyPublisher()
+    }
+
+}
+
+extension CrimeService {
+
+    func streetLevelCrimesPublisher(atCoordinate coordinate: CLLocationCoordinate2D,
+                                    date: Date? = nil) -> AnyPublisher<[Crime], PoliceDataError> {
+        let coordinate = Coordinate(coordinate: coordinate)
+        return streetLevelCrimesPublisher(atCoordinate: coordinate, date: date)
     }
 
 }

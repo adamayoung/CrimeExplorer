@@ -12,18 +12,23 @@ final class AppModel: ObservableObject {
     @Published var region: MKCoordinateRegion
     @Published var userTrackingMode: MapUserTrackingMode = .follow
     @Published private(set) var streetCrimeSummaries: [StreetCrimeSummary] = []
+    @Published var selectedStreetCrimeSummary: StreetCrimeSummary?
+    @Published var currentNeighbourhood: Neighbourhood?
 
     private let backgroundScheduler = DispatchQueue.global(qos: .userInitiated)
     private let locationService: LocationService
     private let crimeManager: CrimeManager
+    private let neighbourhoodManager: NeighbourhoodManager
     @Published private var allStreetCrimeSummaries: [StreetCrimeSummary] = []
     private var requestedLocationCoordinates: [CLLocationCoordinate2D] = []
     private var cancellables: Set<AnyCancellable> = []
 
     init(locationService: LocationService = CLLocationService(), crimeManager: CrimeManager = UKCrimeManager(),
+         neighbourhoodManager: NeighbourhoodManager = UKNeighbourhoodManager(),
          initialRegion: MKCoordinateRegion = .default) {
         self.locationService = locationService
         self.crimeManager = crimeManager
+        self.neighbourhoodManager = neighbourhoodManager
         self.region = initialRegion
 
         setupBindings()
@@ -54,6 +59,23 @@ extension AppModel {
             .sink(receiveValue: updateRegion(toLocation:))
             .store(in: &cancellables)
 
+        setupRegionBindings()
+
+        Publishers.CombineLatest($region, $allStreetCrimeSummaries)
+            .throttle(for: .milliseconds(100), scheduler: backgroundScheduler, latest: true)
+            .map { (region, summaries) in
+                region.shouldAnnotationsBeVisible ? summaries : []
+            }
+            .map {
+                $0.filter { self.region.contains(coordinate: $0.coordinate) }
+            }
+            .removeDuplicates()
+            .receive(on: DispatchQueue.main)
+            .assign(to: \.streetCrimeSummaries, on: self)
+            .store(in: &cancellables)
+    }
+
+    private func setupRegionBindings() {
         $region
             .debounce(for: .milliseconds(500), scheduler: backgroundScheduler)
             .filter { $0.shouldAnnotationsBeVisible }
@@ -74,17 +96,20 @@ extension AppModel {
             .assign(to: \.allStreetCrimeSummaries, on: self)
             .store(in: &cancellables)
 
-        Publishers.CombineLatest($region, $allStreetCrimeSummaries)
-            .throttle(for: .milliseconds(100), scheduler: backgroundScheduler, latest: true)
-            .map { (region, summaries) in
-                region.shouldAnnotationsBeVisible ? summaries : []
-            }
-            .map {
-                $0.filter { self.region.contains(coordinate: $0.coordinate) }
-            }
-            .removeDuplicates()
+        $region
+            .throttle(for: .seconds(2), scheduler: backgroundScheduler, latest: true)
+            .map { $0.center }
+            .map(self.neighbourhoodManager.neighbourhoodPublisher(atCoordinate:))
+            .switchToLatest()
+//            .removeDuplicates()
             .receive(on: DispatchQueue.main)
-            .assign(to: \.streetCrimeSummaries, on: self)
+            .assign(to: \.currentNeighbourhood, on: self)
+            .store(in: &cancellables)
+
+        $currentNeighbourhood
+            .sink { neighbourhood in
+                print("Updating neighbourhood to: \(neighbourhood?.name ?? "(None)")")
+            }
             .store(in: &cancellables)
     }
 

@@ -34,6 +34,7 @@
 		49481406265C3FA000759F5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49481405265C3FA000759F5A /* Assets.xcassets */; };
 		49481409265C3FA000759F5A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49481408265C3FA000759F5A /* Preview Assets.xcassets */; };
 		49481424265C3FA100759F5A /* CrimeExplorer.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 494813ED265C3F9D00759F5A /* CrimeExplorer.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4952D1F42668080E00609EFB /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4952D1F32668080E00609EFB /* BottomSheetView.swift */; };
 		497F5AEB265EF5B0002D957E /* StreetCrimeSummaryMapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497F5AEA265EF5B0002D957E /* StreetCrimeSummaryMapMarker.swift */; };
 		497F5AEC265EF5B0002D957E /* StreetCrimeSummaryMapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497F5AEA265EF5B0002D957E /* StreetCrimeSummaryMapMarker.swift */; };
 		497F5AED265EF5B0002D957E /* StreetCrimeSummaryMapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497F5AEA265EF5B0002D957E /* StreetCrimeSummaryMapMarker.swift */; };
@@ -48,11 +49,15 @@
 		49912C95265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49912C94265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift */; };
 		49912C96265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49912C94265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift */; };
 		49912C97265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49912C94265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift */; };
+		49A59D802666F71800F402F5 /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A59D7F2666F71800F402F5 /* VisualEffectView.swift */; };
+		49A59D892667AD0100F402F5 /* StreetCrimeSummarySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A59D882667AD0100F402F5 /* StreetCrimeSummarySheet.swift */; };
 		49B363F72666DC7A004462EC /* CrimeMapViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B363F62666DC7A004462EC /* CrimeMapViewTests.swift */; };
 		49B363F92666DE46004462EC /* UITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B363F82666DE46004462EC /* UITestCase.swift */; };
 		49B363FA2666DE46004462EC /* UITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B363F82666DE46004462EC /* UITestCase.swift */; };
 		49B363FB2666DE46004462EC /* UITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B363F82666DE46004462EC /* UITestCase.swift */; };
 		49B363FD2666E15F004462EC /* CrimeMapViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B363FC2666E15F004462EC /* CrimeMapViewTests.swift */; };
+		49B3640B2666E900004462EC /* StreetCrimeSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B3640A2666E900004462EC /* StreetCrimeSummaryView.swift */; };
+		49B3640F2666EF98004462EC /* StreetCrimeSummaryCrimeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B3640E2666EF98004462EC /* StreetCrimeSummaryCrimeRow.swift */; };
 		49F77DE0265DA315003BAF8D /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F77DDF265DA315003BAF8D /* AppModel.swift */; };
 		49F77DE1265DA315003BAF8D /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F77DDF265DA315003BAF8D /* AppModel.swift */; };
 		49F77DE2265DA315003BAF8D /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F77DDF265DA315003BAF8D /* AppModel.swift */; };
@@ -159,15 +164,20 @@
 		4948140B265C3FA000759F5A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		49481410265C3FA000759F5A /* Tests (watchOS).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests (watchOS).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49481416265C3FA100759F5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4952D1F32668080E00609EFB /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		497F5AEA265EF5B0002D957E /* StreetCrimeSummaryMapMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetCrimeSummaryMapMarker.swift; sourceTree = "<group>"; };
 		498CE99526613D7600444A29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		498CE9972661406100444A29 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		498CE9A12661479800444A29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		498CE9A32661479B00444A29 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49912C94265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+AnnotationsVisible.swift"; sourceTree = "<group>"; };
+		49A59D7F2666F71800F402F5 /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
+		49A59D882667AD0100F402F5 /* StreetCrimeSummarySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetCrimeSummarySheet.swift; sourceTree = "<group>"; };
 		49B363F62666DC7A004462EC /* CrimeMapViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeMapViewTests.swift; sourceTree = "<group>"; };
 		49B363F82666DE46004462EC /* UITestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestCase.swift; sourceTree = "<group>"; };
 		49B363FC2666E15F004462EC /* CrimeMapViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeMapViewTests.swift; sourceTree = "<group>"; };
+		49B3640A2666E900004462EC /* StreetCrimeSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetCrimeSummaryView.swift; sourceTree = "<group>"; };
+		49B3640E2666EF98004462EC /* StreetCrimeSummaryCrimeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetCrimeSummaryCrimeRow.swift; sourceTree = "<group>"; };
 		49B9B285265C4F560057B4C8 /* CrimeExplorer (iOS).xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "CrimeExplorer (iOS).xctestplan"; sourceTree = "<group>"; };
 		49B9B286265C4FA10057B4C8 /* CrimeExplorer (macOS).xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "CrimeExplorer (macOS).xctestplan"; sourceTree = "<group>"; };
 		49B9B287265C4FC50057B4C8 /* CrimeExplorer (watchOS).xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "CrimeExplorer (watchOS).xctestplan"; path = "Tests watchOS/CrimeExplorer (watchOS).xctestplan"; sourceTree = SOURCE_ROOT; };
@@ -313,6 +323,8 @@
 			isa = PBXGroup;
 			children = (
 				492757A8265C47490039A48D /* IOSAppScene.swift */,
+				49B364052666E8CF004462EC /* StreetCrimeSummaryView */,
+				49A59D872667ABCB00F402F5 /* Components */,
 				494813B8265C3EB100759F5A /* Info.plist */,
 			);
 			path = iOS;
@@ -393,6 +405,25 @@
 				49912C94265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		49A59D872667ABCB00F402F5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4952D1F32668080E00609EFB /* BottomSheetView.swift */,
+				49A59D7F2666F71800F402F5 /* VisualEffectView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		49B364052666E8CF004462EC /* StreetCrimeSummaryView */ = {
+			isa = PBXGroup;
+			children = (
+				49A59D882667AD0100F402F5 /* StreetCrimeSummarySheet.swift */,
+				49B3640A2666E900004462EC /* StreetCrimeSummaryView.swift */,
+				49B3640E2666EF98004462EC /* StreetCrimeSummaryCrimeRow.swift */,
+			);
+			path = StreetCrimeSummaryView;
 			sourceTree = "<group>";
 		};
 		49B9B28B265C5B1B0057B4C8 /* Frameworks */ = {
@@ -747,12 +778,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4952D1F42668080E00609EFB /* BottomSheetView.swift in Sources */,
 				49F77DF4265DB444003BAF8D /* CrimeMapView.swift in Sources */,
 				49F77DE0265DA315003BAF8D /* AppModel.swift in Sources */,
 				49912C95265F12BD00D23CA3 /* MKCoordinateRegion+AnnotationsVisible.swift in Sources */,
 				492757A9265C47490039A48D /* IOSAppScene.swift in Sources */,
 				497F5AEB265EF5B0002D957E /* StreetCrimeSummaryMapMarker.swift in Sources */,
+				49A59D802666F71800F402F5 /* VisualEffectView.swift in Sources */,
+				49B3640F2666EF98004462EC /* StreetCrimeSummaryCrimeRow.swift in Sources */,
+				49B3640B2666E900004462EC /* StreetCrimeSummaryView.swift in Sources */,
 				494813D9265C3EB100759F5A /* ContentView.swift in Sources */,
+				49A59D892667AD0100F402F5 /* StreetCrimeSummarySheet.swift in Sources */,
 				494813D7265C3EB100759F5A /* CrimeExplorerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

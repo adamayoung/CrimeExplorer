@@ -5,6 +5,7 @@ struct StreetCrimeSummaryMapMarker: View {
 
     var summary: StreetCrimeSummary
     var showAnnotationLabels: Bool = true
+    var onTap: () -> Void
 
     @Environment(\.colorScheme) private var colorScheme
     @State private var scale: CGFloat = 0.5
@@ -40,6 +41,7 @@ struct StreetCrimeSummaryMapMarker: View {
         .animation(animation, value: opacity)
         .onAppear(perform: show)
         .onDisappear(perform: hide)
+        .onTapGesture(perform: onTap)
     }
 
     private var image: some View {
@@ -83,7 +85,7 @@ struct StreetCrimeSummaryMapMarker_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             ForEach(StreetCrimeSummary.mocks, id: \.self) {
-                StreetCrimeSummaryMapMarker(summary: $0, showAnnotationLabels: true)
+                StreetCrimeSummaryMapMarker(summary: $0, showAnnotationLabels: true, onTap: {})
                     .previewLayout(.sizeThatFits)
             }
 
