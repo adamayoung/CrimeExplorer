@@ -15,7 +15,8 @@ struct StreetCrimeSummarySheet: View {
                 streetCrimeSummary: model.selectedStreetCrimeSummary
             )
         }
-        .onReceive(model.$selectedStreetCrimeSummary.delay(for: .milliseconds(200), scheduler: DispatchQueue.main)) { summary in
+        .onReceive(model.$selectedStreetCrimeSummary.delay(for: .milliseconds(200),
+                                                           scheduler: DispatchQueue.main)) { summary in
             guard summary != nil else {
                 return
             }

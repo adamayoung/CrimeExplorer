@@ -101,16 +101,11 @@ extension AppModel {
             .map { $0.center }
             .map(self.neighbourhoodManager.neighbourhoodPublisher(atCoordinate:))
             .switchToLatest()
-//            .removeDuplicates()
+            .removeDuplicates()
             .receive(on: DispatchQueue.main)
             .assign(to: \.currentNeighbourhood, on: self)
             .store(in: &cancellables)
 
-        $currentNeighbourhood
-            .sink { neighbourhood in
-                print("Updating neighbourhood to: \(neighbourhood?.name ?? "(None)")")
-            }
-            .store(in: &cancellables)
     }
 
     private func updateRegion(toLocation location: CLLocation) {

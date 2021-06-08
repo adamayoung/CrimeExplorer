@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49024D0F266EA8390059F420 /* CrimeBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49024D0E266EA8390059F420 /* CrimeBadge.swift */; };
+		49024D10266EA8390059F420 /* CrimeBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49024D0E266EA8390059F420 /* CrimeBadge.swift */; };
+		49024D11266EA8390059F420 /* CrimeBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49024D0E266EA8390059F420 /* CrimeBadge.swift */; };
 		492757A9265C47490039A48D /* IOSAppScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492757A8265C47490039A48D /* IOSAppScene.swift */; };
 		492757AB265C478B0039A48D /* MacAppScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492757AA265C478B0039A48D /* MacAppScene.swift */; };
 		492757AC265C47920039A48D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494813AF265C3EAF00759F5A /* ContentView.swift */; };
@@ -131,6 +134,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		49024D0E266EA8390059F420 /* CrimeBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeBadge.swift; sourceTree = "<group>"; };
 		492757A8265C47490039A48D /* IOSAppScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSAppScene.swift; sourceTree = "<group>"; };
 		492757AA265C478B0039A48D /* MacAppScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacAppScene.swift; sourceTree = "<group>"; };
 		492757AF265C47FB0039A48D /* WatchAppScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAppScene.swift; sourceTree = "<group>"; };
@@ -238,6 +242,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49024D0D266EA8170059F420 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				49024D0E266EA8390059F420 /* CrimeBadge.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		491EB261265CF3E500D83E4F /* Tests Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +309,7 @@
 				49F77DDF265DA315003BAF8D /* AppModel.swift */,
 				494813AF265C3EAF00759F5A /* ContentView.swift */,
 				49F77DD1265D9584003BAF8D /* CrimeMapView */,
+				49024D0D266EA8170059F420 /* Components */,
 				49912C93265F129B00D23CA3 /* Extensions */,
 				494813B0265C3EB100759F5A /* Assets.xcassets */,
 				498CE99626613D7600444A29 /* Localizable.strings */,
@@ -790,6 +803,7 @@
 				494813D9265C3EB100759F5A /* ContentView.swift in Sources */,
 				49A59D892667AD0100F402F5 /* StreetCrimeSummarySheet.swift in Sources */,
 				494813D7265C3EB100759F5A /* CrimeExplorerApp.swift in Sources */,
+				49024D0F266EA8390059F420 /* CrimeBadge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -803,6 +817,7 @@
 				494813DA265C3EB100759F5A /* ContentView.swift in Sources */,
 				497F5AEC265EF5B0002D957E /* StreetCrimeSummaryMapMarker.swift in Sources */,
 				492757AB265C478B0039A48D /* MacAppScene.swift in Sources */,
+				49024D10266EA8390059F420 /* CrimeBadge.swift in Sources */,
 				494813D8265C3EB100759F5A /* CrimeExplorerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -833,6 +848,7 @@
 			files = (
 				49481400265C3FA000759F5A /* NotificationController.swift in Sources */,
 				492757B1265C48DB0039A48D /* CrimeExplorerApp.swift in Sources */,
+				49024D11266EA8390059F420 /* CrimeBadge.swift in Sources */,
 				49F77DE2265DA315003BAF8D /* AppModel.swift in Sources */,
 				492757AC265C47920039A48D /* ContentView.swift in Sources */,
 				49F77DF6265DB45E003BAF8D /* CrimeMapView.swift in Sources */,

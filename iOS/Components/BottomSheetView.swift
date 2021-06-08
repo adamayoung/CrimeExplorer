@@ -59,20 +59,18 @@ struct BottomSheetView<Header: View, Content: View>: View {
                 .padding(.top)
                 .padding(.bottom, 16)
 
-//            ScrollView {
-                if let header = header {
-                    header
-                }
+            if let header = header {
+                header
+            }
 
-                content()
-                    .opacity(contentOpacity)
+            content()
+                .opacity(contentOpacity)
 
-                Spacer()
-//            }
+            Spacer()
         }
         .frame(height: maxHeight * 1.2)
         .backgroundVisualEffect()
-        .cornerRadius(10.0)
+        .cornerRadius(20.0)
         .shadow(color: Color(.sRGBLinear, white: 0, opacity: 0.13), radius: 10.0)
         .offset(y: yOffset)
         .animation(animation, value: yOffset)

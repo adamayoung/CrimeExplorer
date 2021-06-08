@@ -7,18 +7,12 @@ struct StreetCrimeSummaryCrimeRow: View {
 
     var body: some View {
         HStack(alignment: .center, spacing: 4) {
-            Circle()
-                .fill(crime.category.backgroundColor)
-                .frame(width: 32, height: 32)
-                .shadow(radius: 3, x: 2, y: 2)
-                .overlay(crime.category.image
-                            .resizable()
-                            .foregroundColor(.white)
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 20, height: 20, alignment: .center))
+            CrimeBadge(category: crime.category)
+                .frame(width: 30, height: 30)
 
             Text(crime.category.name)
                 .font(.headline)
+                .padding(.leading, 5)
             Spacer()
 
         }
