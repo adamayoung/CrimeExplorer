@@ -8,12 +8,10 @@ on:
   workflow_dispatch:
 
 jobs:
-  testflight:
-    name: TestFlight
-    runs-on: macos-latest
+  testflight-ios:
+    name: TestFlight (iOS)
+    runs-on: macos-11
     environment: TestFlight
-    env:
-      DEVELOPER_DIR: /Applications/Xcode_12.4.app/Contents/Developer
 
     steps:
       - name: Checkout

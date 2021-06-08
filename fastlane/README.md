@@ -73,6 +73,20 @@ Build and Sign
 
 ----
 
+## watch
+### watch test
+```
+fastlane watch test
+```
+Test
+### watch build
+```
+fastlane watch build
+```
+Build
+
+----
+
 This README.md is auto-generated and will be re-generated every time [fastlane](https://fastlane.tools) is run.
 More information about fastlane can be found on [fastlane.tools](https://fastlane.tools).
 The documentation of fastlane can be found on [docs.fastlane.tools](https://docs.fastlane.tools).

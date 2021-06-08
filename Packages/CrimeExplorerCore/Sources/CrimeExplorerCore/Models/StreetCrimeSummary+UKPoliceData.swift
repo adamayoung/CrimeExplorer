@@ -11,8 +11,10 @@ extension StreetCrimeSummary {
             let streetID = crime.location.street.id
             var summary = summariesMap[streetID] ?? StreetCrimeSummary(fromCrime: crime)
             let crime = StreetCrimeSummary.Crime(crime: crime)
-            summary.append(crime: crime)
-            summariesMap[streetID] = summary
+            if !summary.crimes.contains(crime) {
+                summary.append(crime: crime)
+                summariesMap[streetID] = summary
+            }
         }
 
         return Array(summariesMap.values)

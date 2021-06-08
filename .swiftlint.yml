@@ -28,8 +28,10 @@ identifier_name:
   excluded:
     - app
     - id
+    - key
     - lhs
     - rhs
+    - top
     - uk
   
 file_length:

@@ -4,7 +4,9 @@ struct WatchAppScene: Scene {
 
     @SceneBuilder var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                ContentView()
+            }
         }
 
         WKNotificationScene(controller: NotificationController.self, category: "Notification")
